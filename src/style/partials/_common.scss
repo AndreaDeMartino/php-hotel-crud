@@ -3,10 +3,10 @@
 ****************************************************/
 
 // GENERAL RULES
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+main{
+  min-height: 100vh;
+  color: $text-col;
+  background-color: $bg-col;
 }
 
 a{

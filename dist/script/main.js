@@ -10988,10 +10988,10 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
 
 /***/ }),
 
-/***/ "./src/style/main.scss":
-/*!*****************************!*\
-  !*** ./src/style/main.scss ***!
-  \*****************************/
+/***/ "./src/style/app.scss":
+/*!****************************!*\
+  !*** ./src/style/app.scss ***!
+  \****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -11000,14 +11000,14 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
 /***/ }),
 
 /***/ 0:
-/*!********************************************************!*\
-  !*** multi ./src/script/main.js ./src/style/main.scss ***!
-  \********************************************************/
+/*!*******************************************************!*\
+  !*** multi ./src/script/main.js ./src/style/app.scss ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Applications/MAMP/htdocs/php-hotel-crud/src/script/main.js */"./src/script/main.js");
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/php-hotel-crud/src/style/main.scss */"./src/style/main.scss");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/php-hotel-crud/src/style/app.scss */"./src/style/app.scss");
 
 
 /***/ })
