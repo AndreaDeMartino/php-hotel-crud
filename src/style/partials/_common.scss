@@ -1,0 +1,50 @@
+/****************************************************
+* COMMON STYLES
+****************************************************/
+
+// GENERAL RULES
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+// MIXINS
+
+// DisplayInline for ul list -- param: padding
+@mixin u--list($display: inline-block,$padding: 0){
+  li{
+    list-style: none;
+    display: $display;
+    padding-right: $padding;
+  }
+}
+
+// Flex Center -- param: direction
+@mixin u--flex($direction: row,$justify: center,$align: center){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Custom Wrapper -- param: widh
+@mixin u--wrapper($width: 100%){
+  width: $width;
+  margin: 0 auto;
+}
+
+// Border bottom line -- param: width and color
+@mixin u--bottom-line ($width: 100%,$color,$left: 0,$bottom: 0){
+  content: '';
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+  height: 1px;
+  width: $width;
+  background-color: $color;
+  opacity: 0.3;
+}
