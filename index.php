@@ -4,9 +4,15 @@
 
   // Importo Head
   include __DIR__ .'/partials/templates/head.php';
-?>
 
-<main class="container">
+  // Alerts
+  if ( !empty($_GET['del']) ){ ?>
+    <div class="alert alert-success">
+      Stanza cancellata correttamente
+    </div>
+  <?php } ?>
+
+<main class="container my-4">
   <div class="row">
     <div class="col-12">
 
@@ -46,7 +52,10 @@
                       <a class="text-primary" href="">Update</a>
                     </td>
                     <td>
-                      <a class="text-danger" href="">Delete</a>
+                      <form action="./partials/delete/db-query.php" method = "POST">
+                        <input type="hidden" name="id" value=" <?php echo $room['id'] ?> ">
+                        <input type="submit" class = "btn btn-danger" value="Delete">
+                      </form>
                     </td>
                   </tr>  
                 <?php }
