@@ -49,7 +49,7 @@
                       <a class="text-success" href="show.php?id=<?php echo $room['id']; ?>">View</a>
                     </td>
                     <td>
-                      <a class="text-primary" href="">Update</a>
+                      <a class="text-primary" href="edit.php?id=<?php echo $room['id']; ?>">Edit</a>
                     </td>
                     <td>
                       <form action="./partials/delete/db-query.php" method = "POST">
