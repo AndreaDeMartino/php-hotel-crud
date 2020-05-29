@@ -19,7 +19,7 @@
   $result = $conn->query($sql);
 
   if($result && $conn->affected_rows > 0){
-    header("location: $base_path/show.php?id=$id_room");
+    header("location: $base_path/show.php?id=$id_room"); 
   } elseif($result){
     die('Nessun Risultato trovato');
   } else{
