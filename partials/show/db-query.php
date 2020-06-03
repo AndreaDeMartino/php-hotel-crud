@@ -1,24 +1,15 @@
 <?php 
-// Carico connessione al DB
-include __DIR__ . '/../db-con.php';
+  // Carico connessione al DB
+  include __DIR__ . '/../db-con.php';
 
+  // Richiamo funzione
+  include __DIR__ . '/../functions.php';
 
-// Prendo room id da url
-$id_room = $_GET['id'];
+  // Prendo room id da url
+  $id_room = $_GET['id'];
 
-// Query room selezionata
-$sql = "SELECT * FROM stanze WHERE id = $id_room";
-$result = $conn->query($sql);
+  // Eseguo funzione getId
+  $room = getId($conn,'stanze',$id_room);
 
-
-if ($conn && $result->num_rows > 0){
-  $room = $result->fetch_assoc();
-} elseif ($result){
-  echo 'Nessun Risultato';
-} else{
-  echo 'Errore Query';
-}
-
-
-// Chiusura Connessione
-$conn->close();
+  // Chiusura Connessione
+  $conn->close();

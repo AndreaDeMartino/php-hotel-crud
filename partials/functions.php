@@ -21,3 +21,23 @@
 
     return ($records);
   };
+
+
+  // GET ALL RECORDS FROM A TABLE WITH INPUT ID
+  function getId($conn,$table,$id){
+    // Query room selezionata
+    $sql = "SELECT * FROM $table WHERE id = $id";
+    $result = $conn->query($sql);
+
+    if ($conn && $result->num_rows > 0){
+      $record = $result->fetch_assoc();
+    } elseif ($result){
+      $record = [];
+    } else{
+      $record = false;
+    }
+    // Chiusura Connessione
+    $conn->close();
+
+    return $record;
+  }
