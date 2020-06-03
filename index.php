@@ -4,7 +4,7 @@
 
   // Importo Head
   include __DIR__ .'/partials/templates/head.php';
-
+  
   // Alerts
   if ( !empty($_GET['del']) ){ ?>
     <div class="alert alert-success">
