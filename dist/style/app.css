@@ -10941,13 +10941,23 @@ a.text-dark:focus {
 * COMMON STYLES
 ****************************************************/
 
-main {
+body {
   min-height: 100vh;
   color: #333;
   background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
   text-decoration: none;
+}
+
+/****************************************************
+* MAIN
+****************************************************/
+
+main {
+  flex-grow: 1;
 }
 

@@ -15,13 +15,18 @@
 <body>
 
   <header class="header">
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Boolean hotel</a>
+    <nav class="navbar navbar-dark navbar-expand bg-primary">
+      <a class="navbar-brand" href="<?php echo $base_path ?>">Boolean hotel</a>
 
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
           <a class="nav-link" href=" <?php echo $base_path ?>">
             Tutte le stanze
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href=" <?php echo $base_path ?>create.php">
+            New Room
           </a>
         </li>
       </ul>

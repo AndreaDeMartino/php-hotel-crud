@@ -23,10 +23,12 @@
             <li class="list-group-item">ROOM NUMBER: <?php echo $room['room_number']?></li>
             <li class="list-group-item">BEDS: <?php echo $room['beds']?></li>
             <li class="list-group-item">FLOOR: <?php echo $room['floor']?></li>
+            <li class="list-group-item">CREATED AT: <?php echo $room['created_at']?></li>
+            <li class="list-group-item">UPDATED AT: <?php echo $room['updated_at']?></li>
           </ul>
         </div>
-
-        <a href="./index.php"> Back to archive</a>
+       
+        <a class="btn btn-primary" href=" <?php echo $base_path ?>edit.php?id=<?php echo $room['id']?>">Edit</a>
       </main>
 
     </div>

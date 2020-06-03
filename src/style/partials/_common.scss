@@ -3,10 +3,12 @@
 ****************************************************/
 
 // GENERAL RULES
-main{
+body{
   min-height: 100vh;
   color: $text-col;
   background-color: $bg-col;
+  display: flex;
+  flex-direction: column;
 }
 
 a{

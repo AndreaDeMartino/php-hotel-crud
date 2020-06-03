@@ -12,15 +12,27 @@
   $beds = $_POST['beds'];
   $floor = $_POST['floor'];
 
+  // $sql = "UPDATE stanze 
+  //         SET `room_number` = $room_number, `beds` = $beds, `floor` = $floor
+  //         WHERE `id` = $id_room";
+
+  // $result = $conn->query($sql);
+
+  // UPDATE CON PREPARED STATEMENTS
+  
   $sql = "UPDATE stanze 
-          SET `room_number` = $room_number, `beds` = $beds, `floor` = $floor
-          WHERE `id` = $id_room";
+          SET `room_number` = ?, `beds` = ?, `floor` = ?, `updated_at`= NOW()
+          WHERE `id` = ?";
 
-  $result = $conn->query($sql);
+  $stmt = $conn->prepare($sql);
 
-  if($result && $conn->affected_rows > 0){
-    header("location: $base_path/show.php?id=$id_room"); 
-  } elseif($result){
+  $stmt->bind_param('iiii', $room_number, $beds, $floor,$id_room);
+
+  $stmt->execute();
+
+  if($stmt && $stmt->affected_rows > 0){
+    header("location: $base_path" . "show.php?id=$id_room"); 
+  } elseif($stmt){
     die('Nessun Risultato trovato');
   } else{
     die('Errore Quert');
